@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAWSAQ Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" onclick="showPage('market')">Market</a>
+        <a href="#" onclick="showPage('portfolio')">Portfolio</a>
+    </div>
+
+    <div id="market" class="page">
+        <h2>BAWSAQ Stock Market</h2>
+        <table>
+            <tr>
+                <th>Company</th>
+                <th>Stock Price</th>
+                <th>Change</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>FlyUS</td>
+                <td>$50</td>
+                <td><span class="up">+3%</span></td>
+                <td><button onclick="buyStock('FlyUS', 50)">Buy</button></td>
+            </tr>
+            <tr>
+                <td>Grotti</td>
+                <td>$120</td>
+                <td><span class="down">-1.5%</span></td>
+                <td><button onclick="buyStock('Grotti', 120)">Buy</button></td>
+            </tr>
+            <tr>
+                <td>Maze Bank</td>
+                <td>$200</td>
+                <td><span class="up">+5%</span></td>
+                <td><button onclick="buyStock('Maze Bank', 200)">Buy</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="portfolio" class="page" style="display: none;">
+        <h2>Your Portfolio</h2>
+        <h3>Balance: $<span id="balance">1000</span></h3>
+        <h3>Owned Stocks:</h3>
+        <table id="portfolioTable">
+            <tr>
+                <th>Company</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
